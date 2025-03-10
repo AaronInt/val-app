@@ -20,8 +20,8 @@ function Home() {
             }}
             >Ready to Continue?</motion.h1> */}
       <h1>Are you ready to continue?</h1>
-      <Button text="Yes" />
-      <Button text="No" />
+      <Button text="Yes" navigateTo="/Yes"/>
+      <Button text="No" navigateTo="/No"/>
     </>
   );
 }

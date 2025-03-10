@@ -1,13 +1,12 @@
-import bear from "../assets/bear.gif";
 import * as motion from "motion/react-client";
-import Button from "../components/ui/Button/Button";
+import pikachu from "../assets/pikachu.gif";
 
-function Yes() {
+function No() {
   return (
     <div>
       <motion.img
         style={{ height: "400px", width: "auto" }}
-        src={bear}
+        src={pikachu}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
@@ -15,7 +14,6 @@ function Yes() {
           scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
         }}
       ></motion.img>
-
       <motion.h2
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -24,21 +22,10 @@ function Yes() {
           scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
         }}
       >
-        {" "}
-        Yayyyyyyy!
+        Ripppppp
       </motion.h2>
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 0.4,
-          scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
-        }}
-      >
-        <Button text="Next" navigateTo="/DateSetting" />
-      </motion.div>
     </div>
   );
 }
 
-export default Yes;
+export default No;
