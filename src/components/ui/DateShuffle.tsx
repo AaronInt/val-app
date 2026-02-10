@@ -16,7 +16,7 @@ function DateShuffle() {
   }, []);
 
   // Function to generate random dates
-  const generateRandomDates = (count) => {
+  const generateRandomDates = (count: number) => {
     const randomDates = [];
     for (let i = 0; i < count; i++) {
       const randomDate = new Date(
@@ -35,7 +35,7 @@ function DateShuffle() {
   const [showFinalDate, setShowFinalDate] = useState(false); // State to control whether the final date is shown
 
   useEffect(() => {
-    let interval;
+    let interval: number;
 
     if (isShuffling) {
       // Shuffle through dates quickly
