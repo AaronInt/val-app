@@ -1,27 +1,30 @@
-//import { useState } from "react";
 import Button from "../components/ui/Button/Button";
-import { motion } from "motion/react";
+import please from "../assets/please.gif";
+import { useEffect, useRef } from "react";
+import backgroundMusic from "../assets/the-shop-song-wii-pt;-1-made-with-Voicemod.mp3";
 
 function Home() {
-  //const [click, setClick] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    audioRef.current?.play().catch((error) => {
+      console.log("Autoplay prevented:", error);
+    });
+  }, []);
   return (
     <>
-      {/* <motion.h1 animate={{
-                scale: [1, 2, 2, 1, 1],
-                rotate: [0, 0, 180, 180, 0],
-                borderRadius: ["0%", "0%", "50%", "50%", "0%"],
-            }}
-            transition={{
-                duration: 2,
-                ease: "easeInOut",
-                times: [0, 0.2, 0.5, 0.8, 1],
-                repeat: Infinity,
-                repeatDelay: 1,
-            }}
-            >Ready to Continue?</motion.h1> */}
-      <h1>Are you ready to continue?</h1>
-      <Button text="Yes" navigateTo="/Yes"/>
-      <Button text="No" navigateTo="/No"/>
+      <audio ref={audioRef} src={backgroundMusic} />
+
+      <h1>Will you be my Valentine?</h1>
+      
+        <Button text="Yes" navigateTo="/Yes" />
+      
+      
+        <Button text="No" navigateTo="/No" />
+      
+      <div style={{ marginTop: "1rem" }}>
+        <img src={please} alt="please" />
+      </div>
     </>
   );
 }

@@ -1,9 +1,19 @@
 import * as motion from "motion/react-client";
 import pikachu from "../assets/pikachu.gif";
+import backgroundMusic from "../assets/say-goodbye-🥺-made-with-Voicemod.mp3";
+import { useEffect, useRef } from "react";
 
 function No() {
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    audioRef.current?.play().catch((error) => {
+      console.log("Autoplay prevented:", error);
+    });
+  }, []);
   return (
     <div>
+      <audio ref={audioRef} src={backgroundMusic} />
       <motion.img
         style={{ height: "400px", width: "auto" }}
         src={pikachu}

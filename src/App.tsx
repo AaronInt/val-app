@@ -6,15 +6,22 @@ import "./App.css";
 import Home from "./pages/Home";
 import Yes from './pages/Yes';
 import No from './pages/No';
+import DateSetting from './pages/DateSetting';
+import Thanks from './pages/Thanks';
+import Start from './pages/Start';
+import Oh from './pages/Oh';
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <Routes>
-      <Route path='/' element={<Home />} />
+      <Route path='/' element={<Start />} />
       <Route path='/Yes' element={<Yes />} />
+      <Route path='/Oh' element={<Oh />} />
       <Route path='/No' element={<No />} />
+      <Route path='/DateSetting' element={<DateSetting/>} />
+      <Route path='/Thanks' element={<Thanks/>}/>
+      <Route path='/Home' element={<Home/>}/>
     </Routes>
   );
 }

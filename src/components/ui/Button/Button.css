@@ -1,7 +1,25 @@
+Perfect! You can keep your base .button styles and just add the variant classes on top:
+css/* Button.css */
+
+/* Base button styles - always applied */
 .button {
-    margin-right: 1rem;
+    margin-right: 2rem;
 }
 
-.button:last-child {
+/* .button:last-child {
     margin-right: 0;
+} */
+
+/* Variant styles - optional additions */
+.button-primary {
+    /* your default button look */
+    padding: .3rem .75rem;
+    margin-right: .75rem;
+    font-size: 1.25rem;
+}
+
+.button-secondary {
+    /* alternative style */
+    padding: .25rem .25rem;
+    font-size: 1rem;
 }

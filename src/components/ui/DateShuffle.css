@@ -1,0 +1,12 @@
+.jumping-element {
+    animation: bounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-20px) scale(1.05);
+    }
+  }
